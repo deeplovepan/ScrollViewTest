@@ -23,6 +23,7 @@
 		A60DAF981720634900E4D9D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60DAF731720634900E4D9D6 /* Foundation.framework */; };
 		A60DAFA01720634900E4D9D6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A60DAF9E1720634900E4D9D6 /* InfoPlist.strings */; };
 		A60DAFA31720634900E4D9D6 /* ScrollViewTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A60DAFA21720634900E4D9D6 /* ScrollViewTestTests.m */; };
+		A60DAFAD172063E500E4D9D6 /* book.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A60DAFAC172063E500E4D9D6 /* book.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		A60DAF9F1720634900E4D9D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A60DAFA11720634900E4D9D6 /* ScrollViewTestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollViewTestTests.h; sourceTree = "<group>"; };
 		A60DAFA21720634900E4D9D6 /* ScrollViewTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewTestTests.m; sourceTree = "<group>"; };
+		A60DAFAC172063E500E4D9D6 /* book.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		A60DAF781720634900E4D9D6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A60DAFAC172063E500E4D9D6 /* book.jpg */,
 				A60DAF791720634900E4D9D6 /* ScrollViewTest-Info.plist */,
 				A60DAF7A1720634900E4D9D6 /* InfoPlist.strings */,
 				A60DAF7D1720634900E4D9D6 /* main.m */,
@@ -236,6 +239,7 @@
 				A60DAF861720634900E4D9D6 /* Default@2x.png in Resources */,
 				A60DAF881720634900E4D9D6 /* Default-568h@2x.png in Resources */,
 				A60DAF8B1720634900E4D9D6 /* MainStoryboard.storyboard in Resources */,
+				A60DAFAD172063E500E4D9D6 /* book.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

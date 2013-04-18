@@ -10,6 +10,9 @@
 
 @interface ViewController ()
 
+
+@property (weak, nonatomic) IBOutlet UIScrollView *testScrollView;
+
 @end
 
 @implementation ViewController
@@ -18,6 +21,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.testScrollView.contentSize = CGSizeMake(320*3, 460*3);
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320*2, 460*2)];
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    imageView.image = [UIImage imageNamed:@"book.jpg"];
+    [self.testScrollView addSubview:imageView];
 }
 
 - (void)didReceiveMemoryWarning
