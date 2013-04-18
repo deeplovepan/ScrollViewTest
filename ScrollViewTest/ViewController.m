@@ -21,9 +21,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.testScrollView.contentSize = CGSizeMake(320*3, 460*3);
+    self.testScrollView.contentSize = CGSizeMake(320*4, 460*3);
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320*2, 460*2)];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 1014, 762)];
     imageView.contentMode = UIViewContentModeScaleAspectFill;
     imageView.image = [UIImage imageNamed:@"book.jpg"];
     [self.testScrollView addSubview:imageView];
