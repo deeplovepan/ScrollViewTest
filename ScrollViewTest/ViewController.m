@@ -17,6 +17,14 @@
 
 @implementation ViewController
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.testScrollView setContentOffset:CGPointMake(150, 250)
+                                 animated:YES];
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
