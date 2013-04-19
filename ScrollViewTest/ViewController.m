@@ -24,7 +24,6 @@
     self.testScrollView.contentSize = CGSizeMake(320*4, 460*3);
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 1014, 762)];
-    imageView.contentMode = UIViewContentModeScaleAspectFill;
     imageView.image = [UIImage imageNamed:@"book.jpg"];
     [self.testScrollView addSubview:imageView];
 }
