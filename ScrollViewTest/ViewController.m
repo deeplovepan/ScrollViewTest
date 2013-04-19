@@ -17,12 +17,6 @@
 
 @implementation ViewController
 
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    [self.testScrollView setContentOffset:CGPointMake(150, 250)
-                                 animated:YES];
-}
 
 
 - (void)viewDidLoad
@@ -31,10 +25,16 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.testScrollView.contentSize = CGSizeMake(320*3, 460*3);
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320*2, 460*2)];
-    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 1014, 762)];
     imageView.image = [UIImage imageNamed:@"book.jpg"];
     [self.testScrollView addSubview:imageView];
+    
+    UITextView *textView = [[UITextView alloc] initWithFrame:
+                            CGRectMake(350, 500, 220, 100)];
+    textView.text = @"希臘英雄也會寫App\n寫App的果然都是英雄";
+    textView.font = [UIFont systemFontOfSize:20];
+    [self.testScrollView addSubview:textView];
+    textView.scrollsToTop = NO;
 }
 
 - (void)didReceiveMemoryWarning
