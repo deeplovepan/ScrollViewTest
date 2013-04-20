@@ -24,6 +24,10 @@
 		A60DAFA01720634900E4D9D6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A60DAF9E1720634900E4D9D6 /* InfoPlist.strings */; };
 		A60DAFA31720634900E4D9D6 /* ScrollViewTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A60DAFA21720634900E4D9D6 /* ScrollViewTestTests.m */; };
 		A60DAFAD172063E500E4D9D6 /* book.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A60DAFAC172063E500E4D9D6 /* book.jpg */; };
+		A6CD253017224D37001A0DA7 /* baby0.png in Resources */ = {isa = PBXBuildFile; fileRef = A6CD252F17224D37001A0DA7 /* baby0.png */; };
+		A6CD253217224D50001A0DA7 /* baby1.png in Resources */ = {isa = PBXBuildFile; fileRef = A6CD253117224D50001A0DA7 /* baby1.png */; };
+		A6CD253417224D6B001A0DA7 /* baby2.png in Resources */ = {isa = PBXBuildFile; fileRef = A6CD253317224D6B001A0DA7 /* baby2.png */; };
+		A6CD253617224D78001A0DA7 /* baby3.png in Resources */ = {isa = PBXBuildFile; fileRef = A6CD253517224D78001A0DA7 /* baby3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,10 @@
 		A60DAFA11720634900E4D9D6 /* ScrollViewTestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollViewTestTests.h; sourceTree = "<group>"; };
 		A60DAFA21720634900E4D9D6 /* ScrollViewTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewTestTests.m; sourceTree = "<group>"; };
 		A60DAFAC172063E500E4D9D6 /* book.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book.jpg; sourceTree = "<group>"; };
+		A6CD252F17224D37001A0DA7 /* baby0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baby0.png; sourceTree = "<group>"; };
+		A6CD253117224D50001A0DA7 /* baby1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baby1.png; sourceTree = "<group>"; };
+		A6CD253317224D6B001A0DA7 /* baby2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baby2.png; sourceTree = "<group>"; };
+		A6CD253517224D78001A0DA7 /* baby3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baby3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +140,10 @@
 		A60DAF781720634900E4D9D6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A6CD252F17224D37001A0DA7 /* baby0.png */,
+				A6CD253117224D50001A0DA7 /* baby1.png */,
+				A6CD253317224D6B001A0DA7 /* baby2.png */,
+				A6CD253517224D78001A0DA7 /* baby3.png */,
 				A60DAFAC172063E500E4D9D6 /* book.jpg */,
 				A60DAF791720634900E4D9D6 /* ScrollViewTest-Info.plist */,
 				A60DAF7A1720634900E4D9D6 /* InfoPlist.strings */,
@@ -240,6 +252,10 @@
 				A60DAF881720634900E4D9D6 /* Default-568h@2x.png in Resources */,
 				A60DAF8B1720634900E4D9D6 /* MainStoryboard.storyboard in Resources */,
 				A60DAFAD172063E500E4D9D6 /* book.jpg in Resources */,
+				A6CD253017224D37001A0DA7 /* baby0.png in Resources */,
+				A6CD253217224D50001A0DA7 /* baby1.png in Resources */,
+				A6CD253417224D6B001A0DA7 /* baby2.png in Resources */,
+				A6CD253617224D78001A0DA7 /* baby3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +473,7 @@
 				A60DAFA81720634900E4D9D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A60DAFA91720634900E4D9D6 /* Build configuration list for PBXNativeTarget "ScrollViewTestTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +482,7 @@
 				A60DAFAB1720634900E4D9D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

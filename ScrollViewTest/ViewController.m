@@ -8,11 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController () <UIScrollViewDelegate>
-{
-    UIImageView *imageView;
-}
-
+@interface ViewController () 
 @property (weak, nonatomic) IBOutlet UIScrollView *testScrollView;
 
 @end
@@ -26,11 +22,18 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320,
-                                        [UIScreen mainScreen].bounds.size.height - 20)];
-    imageView.contentMode = UIViewContentModeScaleAspectFill;
-    imageView.image = [UIImage imageNamed:@"book.jpg"];
-    [self.testScrollView addSubview:imageView];
+    self.testScrollView.contentSize = CGSizeMake(320*4, [UIScreen mainScreen].bounds.size.height - 20);
+    self.testScrollView.pagingEnabled = YES;
+    int i;
+    for(i=0;i<4;i++)
+    {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(320*i, 0, 320,
+                                                                  [UIScreen mainScreen].bounds.size.height - 20)];
+        imageView.contentMode = UIViewContentModeScaleAspectFill;
+        NSString *name = [NSString stringWithFormat:@"baby%d.png", i];
+        imageView.image = [UIImage imageNamed:name];
+        [self.testScrollView addSubview:imageView];
+    }
     
 }
 
@@ -40,11 +43,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - UIScrollViewDelegate
 
-- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
-{
-    return imageView;
-}
 
 @end
