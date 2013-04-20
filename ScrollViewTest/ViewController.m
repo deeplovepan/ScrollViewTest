@@ -52,12 +52,16 @@
     {
         NSLog(@"add page %d", page);
 
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(320*page, 0, 320,
+        UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(320*page, 0, 320, [UIScreen mainScreen].bounds.size.height - 20)];
+        scrollView.maximumZoomScale = 2;
+        scrollView.delegate = self;
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320,
                                                 [UIScreen mainScreen].bounds.size.height - 20)];
+        [scrollView addSubview:imageView];
         imageView.contentMode = UIViewContentModeScaleAspectFill;
         NSString *name = [NSString stringWithFormat:@"baby%d.png", page];
         imageView.image = [UIImage imageNamed:name];
-        [self.testScrollView addSubview:imageView];
+        [self.testScrollView addSubview:scrollView];
         pageDic[@(page)] = imageView;
     }
 }
@@ -76,18 +80,26 @@
 
 #pragma mark - UIScrollViewDelegate
 
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return scrollView.subviews[0];
+}
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    CGFloat pageWidth = scrollView.frame.size.width;
-    int page = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    if(scrollView == self.testScrollView)
+    {
+        CGFloat pageWidth = scrollView.frame.size.width;
+        int page = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+        
+        [self loadScrollViewWithPage:page - 1];
+        [self loadScrollViewWithPage:page];
+        [self loadScrollViewWithPage:page + 1];
+        
+        [self removeScrollViewWithPage:page - 2];
+        [self removeScrollViewWithPage:page + 2];
+    }
    
-    [self loadScrollViewWithPage:page - 1];
-    [self loadScrollViewWithPage:page];
-    [self loadScrollViewWithPage:page + 1];
-    
-    [self removeScrollViewWithPage:page - 2];
-    [self removeScrollViewWithPage:page + 2];
 }
 
 
