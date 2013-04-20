@@ -8,8 +8,10 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-
+@interface ViewController () <UIScrollViewDelegate>
+{
+    UIImageView *imageView;
+}
 
 @property (weak, nonatomic) IBOutlet UIScrollView *testScrollView;
 
@@ -24,7 +26,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 1014, 762)];
+    imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320,
+                                        [UIScreen mainScreen].bounds.size.height - 20)];
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
     imageView.image = [UIImage imageNamed:@"book.jpg"];
     [self.testScrollView addSubview:imageView];
     
@@ -34,6 +38,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return imageView;
 }
 
 @end
