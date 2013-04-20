@@ -102,6 +102,18 @@
    
 }
 
-
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    if(scrollView == self.testScrollView)
+    {
+        CGFloat pageWidth = scrollView.frame.size.width;
+        int page = scrollView.contentOffset.x/pageWidth;
+        UIScrollView *imageScrollView = pageDic[@(page-1)];
+        imageScrollView.zoomScale = 1;
+        imageScrollView = pageDic[@(page+1)];
+        imageScrollView.zoomScale = 1;
+    }
+   
+}
 
 @end
