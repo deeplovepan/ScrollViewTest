@@ -27,9 +27,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    NSLog(@"scroll %@", self.testScrollView);
+    
     pageCount = 4;
     pageDic = [[NSMutableDictionary alloc] init];
-    self.testScrollView.contentSize = CGSizeMake(320*pageCount, [UIScreen mainScreen].bounds.size.height - 20);
+    self.testScrollView.contentSize = CGSizeMake(330*pageCount, [UIScreen mainScreen].bounds.size.height - 20);
     self.testScrollView.pagingEnabled = YES;
     [self loadScrollViewWithPage:0];
     [self loadScrollViewWithPage:1];
@@ -52,8 +54,10 @@
     {
         NSLog(@"add page %d", page);
 
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(320*page, 0, 320,
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(
+                                330*page, 0, 320,
                                                 [UIScreen mainScreen].bounds.size.height - 20)];
+        NSLog(@"image %f %@", self.testScrollView.frame.size.width, imageView);
         imageView.contentMode = UIViewContentModeScaleAspectFill;
         NSString *name = [NSString stringWithFormat:@"baby%d.png", page];
         imageView.image = [UIImage imageNamed:name];

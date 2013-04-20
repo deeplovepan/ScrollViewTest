@@ -21,8 +21,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="glY-nl-k8O" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="3Uo-RS-yND"/>
-                            <constraint firstItem="glY-nl-k8O" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Yhe-ck-gti"/>
                             <constraint firstItem="glY-nl-k8O" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="ba2-3t-8VJ"/>
+                            <constraint firstAttribute="trailing" secondItem="glY-nl-k8O" secondAttribute="trailing" constant="-10" id="fkY-88-TZs"/>
                             <constraint firstItem="glY-nl-k8O" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="sAd-gZ-Fn8"/>
                         </constraints>
                     </view>
@@ -32,9 +32,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-403" y="78"/>
+            <point key="canvasLocation" x="-884" y="126"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="testScrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
