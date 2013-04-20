@@ -62,7 +62,7 @@
         NSString *name = [NSString stringWithFormat:@"baby%d.png", page];
         imageView.image = [UIImage imageNamed:name];
         [self.testScrollView addSubview:scrollView];
-        pageDic[@(page)] = imageView;
+        pageDic[@(page)] = scrollView;
     }
 }
 
